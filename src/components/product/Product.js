@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+
+import "./product.css";
 import Chat from "../chat/Chat";
 import ProductImg from "../../imgs/whiteshirt.jpg";
 
-function Product() {
+const Product = () => {
+  // const { messages } = props;
   const [showChat, setShowChat] = useState(false);
+  const toggle = (e) => {
+    setShowChat(!showChat);
+  };
 
   return (
     <div className="product-card">
@@ -14,7 +20,7 @@ function Product() {
         <p>One of our classics</p>
       </div>
       <div className="p-img">
-        <img src={ProductImg} />
+        <img src={ProductImg} className="product-img" />
       </div>
       <div className="p-btns">
         <button onClick={() => setShowChat(true)}>Talk to me!</button>
@@ -22,6 +28,6 @@ function Product() {
       </div>
     </div>
   );
-}
+};
 
 export default Product;

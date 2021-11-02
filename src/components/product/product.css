@@ -1,0 +1,38 @@
+.product-card {
+  background-color: red;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.p-name {
+  background-color: violet;
+  font-size: 16px;
+  order: 1;
+}
+
+.p-sum {
+  background-color: gold;
+  font-size: 14px;
+  order: 2;
+}
+
+.p-img {
+  background-color: indigo;
+  order: 3;
+}
+
+.product-img {
+  width: 250px;
+  height: 250px;
+}
+
+.p-btns {
+  background-color: mediumblue;
+  order: 4;
+}
