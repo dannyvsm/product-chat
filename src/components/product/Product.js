@@ -5,7 +5,6 @@ import Chat from "../chat/Chat";
 import ProductImg from "../../imgs/whiteshirt.jpg";
 
 const Product = () => {
-  // const { messages } = props;
   const [showChat, setShowChat] = useState(false);
   const toggle = (e) => {
     setShowChat(!showChat);

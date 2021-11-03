@@ -1,11 +1,6 @@
 .home {
   background-color: wheat;
-  width: 100vw;
-  height: 100vh;
 }
 
-.products {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+.product-details {
 }

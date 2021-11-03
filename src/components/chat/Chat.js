@@ -1,31 +1,37 @@
 import React, { useState } from "react";
-import { GrSend } from "react-icons/gr";
+
+//import components
+import Message from "../messages/Message";
+import Form from "../form/Form";
 // import ProductImg from "../../imgs/whiteshirt.jpg";
 
-const Chat = (props) => {
-  const [input, setInput] = useState("");
+const Chat = () => {
+  //setting the state for chat messages
+  const [messages, setMessages] = useState([]);
 
-  const handleChange = (e) => {
-    setInput(e.target.value);
-  };
+  //returns the messages sent
+  const sendMsg = (message) => {
+    if (!message.text) {
+      return;
+    }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const newMessages = [message, ...messages];
 
-    props.onSubmit({
-      id: Math.floor(Math.random() * 10000),
-      text: input,
-    });
-
-    setInput("");
+    setMessages(newMessages);
   };
 
   return (
+    //defining the chat area
     <div className="chat-window">
-      <div className="header">Chat with me</div>
-      <div className="msg-area">
-        {/* <img src={ProductImg} alt="a white shirt" className="chat-img" />
-          <p>hey whats up</p> */}
+      <div className="chat-area">
+        <div className="msg-history">
+          <Message message={messages} className="message" />
+          {/* <img src={ProductImg} alt="a white shirt" />
+          <p>hello</p> */}
+        </div>
+        <div className="user-input">
+          <Form onSubmit={sendMsg} />
+        </div>
       </div>
       <form className="msg-footer" onSubmit={handleSubmit}>
         <input
