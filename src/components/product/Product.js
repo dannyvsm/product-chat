@@ -22,6 +22,7 @@ const Product = () => {
         <img src={ProductImg} className="product-img" />
       </div>
       <div className="p-btns">
+        //toggles the chat window
         <button onClick={() => setShowChat(true)}>Talk to me!</button>
         {showChat ? <Chat /> : null}
       </div>

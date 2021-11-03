@@ -4,11 +4,13 @@ class ActionProvider {
     this.setState = setStateFunc;
   }
 
+  //greet function returns pre-set message when triggered
   greet() {
     const greetingMessage = this.createChatBotMessage("Hi, friend.");
     this.updateChatbotState(greetingMessage);
   }
 
+  //updates the chat, showing previous msgs
   updateChatbotState(message) {
     this.setState((prevState) => ({
       ...prevState,
