@@ -1,4 +1,5 @@
 import React from "react";
+import "./chat.css";
 import Chatbot from "react-chatbot-kit";
 
 import ActionProvider from "./ActionProvider";
@@ -7,7 +8,7 @@ import config from "./config";
 
 const Chat = () => {
   return (
-    <div>
+    <div className="chatbot">
       <Chatbot
         config={config}
         actionProvider={ActionProvider}
