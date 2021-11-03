@@ -1,28 +1,30 @@
-.product-card {
-  background-color: red;
+.container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   text-align: center;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+}
+
+.product-card {
+  background-color: #fff;
 }
 
 .p-name {
-  background-color: violet;
+  font-family: var(--title-font);
+  font-weight: 600;
   font-size: 16px;
 }
 
 .p-sum {
-  background-color: gold;
+  font-family: var(--secondary-font);
   font-size: 14px;
 }
 
 .p-img {
-  background-color: indigo;
 }
 
 .product-img {
@@ -30,6 +32,6 @@
   height: 250px;
 }
 
-.p-btns {
-  background-color: mediumblue;
+.chat-btn {
+  cursor: pointer;
 }
