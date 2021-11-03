@@ -33,17 +33,6 @@ const Chat = () => {
           <Form onSubmit={sendMsg} />
         </div>
       </div>
-      <form className="msg-footer" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="what would you like to know?"
-          className="user-msg"
-          onChange={handleChange}
-        />
-        <button>
-          <GrSend />
-        </button>
-      </form>
     </div>
   );
 };
